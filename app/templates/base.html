@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,17 +11,15 @@
 
 <body>
     <div class="container">
-        <div class="header"></div>
+        <div class="header">
+            {% include 'header.html' %}
+        </div>
         <div class="content">
             {% block content %}
             {% endblock content %}
         </div>
         <div class="footer">
-            <hr>
-            <footer>
-                <pre>&COPY;Copyright2024 - desenvolvido por <a href="mailto:willian365x@gmail.com">Willian Silva</a></pre>
-                <i>Todos os direitos reservados</i>
-            </footer>
+            {% include 'footer.html' %}
         </div>
     </div>
 </body>
